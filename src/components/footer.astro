@@ -1,0 +1,36 @@
+---
+---
+
+<footer>
+    <small>
+        <p>&copy <span id="year"></span> Benjamin Roberts. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </small>
+</footer>
+
+<script>
+    document.querySelector("#year").textContent = new Date().getFullYear().toString();
+</script>
+
+<style>
+    p {
+        text-align: center;
+    }
+    ul {
+        text-align:center;
+    }
+    li{
+        display: inline;
+        margin: 0 1rem;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+</style>
