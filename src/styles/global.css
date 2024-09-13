@@ -1,0 +1,24 @@
+/* Global CSS vars for colors */
+:root {
+    --background-color: #121212;  /* Dark background */
+    --foreground-color: #1e1e1e;  /* Slightly lighter background for contrast */
+    --text-color: #e0e0e0;        /* Light text color for readability */
+    --accent-color: #bb86fc; 
+
+    /* Additional Colors */
+    --header-bg-color: #1c1c1c;   /* Background color for headers */
+    --footer-bg-color: #1c1c1c;   /* Background color for footers */
+    --link-color: #bb86fc;        /* Color for links and interactive text */
+    --button-bg-color: #333333;   /* Background color for buttons */
+    --button-text-color: #e0e0e0; /* Text color for buttons */
+    --border-color: #444444;      /* Color for borders and dividers */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Color for shadows */
+    
+    /* Code Syntax Highlighting */
+    --code-bg-color: #2e2e2e;     /* Background color for code blocks */
+    --code-text-color: #f5f5f5;   /* Text color for code */
+    --code-keyword-color: #ff79c6; /* Color for code keywords */
+    --code-string-color: #f1fa8c; /* Color for code strings */
+    --code-comment-color: #6272a4; /* Color for code comments */
+}
+
