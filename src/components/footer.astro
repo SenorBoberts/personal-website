@@ -1,12 +1,14 @@
 ---
+import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
 
 <footer>
     <small>
         <p>&copy <span id="year"></span> Benjamin Roberts. All rights reserved.</p>
         <ul>
-            <li><a href="https://github.com/SenorBoberts">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/benrobertsplus1/">LinkedIn</a></li>
+            <li><a href="https://github.com/SenorBoberts"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/benrobertsplus1/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
         </ul>
     </small>
 </footer>
@@ -20,11 +22,15 @@
         text-align: center;
     }
     ul {
-        text-align:center;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 1rem;
     }
     li{
-        display: inline;
-        margin: 0 1rem;
+        padding-bottom: 1rem;
     }
     a{
         color: var(--text-color);
