@@ -4,11 +4,11 @@ import { Icon } from 'astro-icon/components'
 
 <div>
 <nav>
-    <a>Home</a>
+    <a href="/">Ben Roberts</a>
     <ul>
-        <li><a>About Me</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact</a></li>
+        <li><a href="about">About Me</a></li>
+        <li><a href="blog">Blog</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 </nav>
 </div>
@@ -29,6 +29,7 @@ import { Icon } from 'astro-icon/components'
     }
     a{
         text-decoration: none;
+        color: var(--text-color)
         font-size: 1rem;
     }
     ul{
