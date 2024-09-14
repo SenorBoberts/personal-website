@@ -7,16 +7,22 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 		<div id="image">
 			<img src="/images/headshot.JPG" alt="headshot image">
 		</div>
-		<h1>Hi I'm Ben Roberts</h1>
+		<div id="tagline">
+			<h1>Hi I'm Ben Roberts</h1>
+			<h2>I do things</h2>
+			<h2>Hire me</h2>
+		</div>
 	</div>
 </DefaultLayout>
 
 <style>
 	#header{
 		display: flex;
+		justify-content: center;
+		gap: 2rem;
 	}
 	#image{
-		width: 25%;
+		width: 15rem;
 		height: auto;
 		border-radius: 10%;
 		overflow: hidden;
@@ -29,5 +35,9 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+	#tagline{
+		display: flex;
+		flex-direction: column;
 	}
 </style>
