@@ -3,5 +3,31 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 ---
 
 <DefaultLayout title="description">
-	<h1>Hi i'm Ben Roberts</h1>
+	<div id="header">
+		<div id="image">
+			<img src="/images/headshot.JPG" alt="headshot image">
+		</div>
+		<h1>Hi I'm Ben Roberts</h1>
+	</div>
 </DefaultLayout>
+
+<style>
+	#header{
+		display: flex;
+	}
+	#image{
+		width: 25%;
+		height: auto;
+		border-radius: 10%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	img{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+</style>
