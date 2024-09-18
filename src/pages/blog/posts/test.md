@@ -1,14 +1,11 @@
 ---
 layout: "../../../layouts/postLayout.astro"
-title: "Sample Document Title"
-subtitle: "This is a subtitle for the document"
+title: Sample Document Title
+subtitle: This is a subtitle for the document
+author: Ben Roberts
 date: "2024-09-17"
 image: "https://via.placeholder.com/800x400.png?text=Sample+Image"
 ---
-
-# Sample Document Title
-
-## This is a subtitle for the document
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Nulla facilisi. Sed non ante nec elit vehicula semper. Integer sed dui nec magna ultrices volutpat. 
 

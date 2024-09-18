@@ -1,9 +1,38 @@
 ---
 import DefaultLayout from "./defaultLayout.astro";
 
-
+const {title, subtitle, author, date} = Astro.props.frontmatter;
 ---
 
 <DefaultLayout title="post">
-    <slot />
+    <div id="content">
+        <div id="heading">
+            <h1 id="title">{title}</h1>
+            <h3 id="subtitle">{subtitle}</h3>
+            <small id="byline">{`by ${author} on ${date}`}</small>
+        </div>
+        <div id="text">
+            <slot />
+        </div>
+    </div>
 </DefaultLayout>
+
+<style>
+    #content{
+        width: 90%;
+        margin: auto;
+    }
+    #heading{
+        display: flex;
+        flex-direction: column;
+    }
+    #title{
+        margin: 0 0 1rem 0;
+    }
+    #subtitle{
+        margin: 0;
+    }
+    #byline{
+        color: gray;
+    }
+</style>
