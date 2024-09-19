@@ -1,7 +1,11 @@
 ---
 import DefaultLayout from "./defaultLayout.astro";
+import PostHeading from "../components/postHeading.astro";
 
-const {title, subtitle, author, date, description} = Astro.props.frontmatter;
+const {frontmatter, headings} = Astro.props;
+const {title, subtitle, author, date, description} = frontmatter;
+
+console.log(headings)
 ---
 
 <DefaultLayout 
@@ -9,12 +13,8 @@ const {title, subtitle, author, date, description} = Astro.props.frontmatter;
     description={description}>
     <article>
     <div id="content">
-        <div id="heading">
-            <h1 id="title">{title}</h1>
-            <h3 id="subtitle">{subtitle}</h3>
-            <hr>
-            <small id="byline">{`by ${author} on ${date}`}</small>
-        </div>
+        <PostHeading {title} {subtitle} {author} {date} />
+
         <div id="text">
             <slot />
         </div>
@@ -27,22 +27,5 @@ const {title, subtitle, author, date, description} = Astro.props.frontmatter;
         width: 80%;
         margin: auto;
         padding: 2.5rem;
-    }
-    #heading{
-        display: flex;
-        flex-direction: column;
-    }
-    #title{
-        margin: 0 0 .5rem 0;
-        font-size: 2.5rem;
-    }
-    #subtitle{
-        margin: 0;
-    }
-    #byline{
-        color: gray;
-    }
-    hr{
-        width: 100%;
     }
 </style>

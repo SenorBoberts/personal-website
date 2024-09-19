@@ -1,12 +1,15 @@
 ---
 const {title, subtitle, author, date} = Astro.props;
+
+const dateObject = new Date(date);
+const dateString = dateObject.toLocaleDateString('en-Us', { timeZone: "UTC" });
 ---
 
 <div id="heading">
     <h1 id="title">{title}</h1>
     <h3 id="subtitle">{subtitle}</h3>
     <hr>
-    <small id="byline">{`by ${author} on ${date}`}</small>
+    <small id="byline">{`by ${author} on ${dateString}`}</small>
 </div>
 
 <style>

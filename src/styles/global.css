@@ -20,6 +20,10 @@
     --code-keyword-color: #ff79c6; /* Color for code keywords */
     --code-string-color: #f1fa8c; /* Color for code strings */
     --code-comment-color: #6272a4; /* Color for code comments */
+
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 a{
     text-decoration: none;
