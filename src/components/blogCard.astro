@@ -1,28 +1,36 @@
 ---
+import PostHeading from "./postHeading.astro";
+
+const {title, subtitle, author, date} = Astro.props.post.frontmatter;
 ---
 
 <div id="container">
     <div id="image">
         <img src="/images/placeholder.jpg" alt="placeholder image">
     </div>
-    <div id="text content">
-        <h1>Title</h1>
-        <h2>Subtitle</h2>
-        <p>September 10, 2024</p>
+    <div id="heading">
+        <PostHeading {title} {subtitle} {author} {date}/> 
     </div>
 </div>
 
 <style>
+    #container:hover{
+        box-shadow: .1rem .1rem 0 var(--accent-color);
+    }
     #container{
         display: flex;
         background: var(--foreground-color); 
         margin: auto;
         width: 90%;
-        gap: 2rem;
+        gap: 1rem;
     }
     img{
         height: 10rem;
         width: auto;
+        padding: 1rem;
+    }
+    #heading{
+        flex-grow: 1;
         padding: 1rem;
     }
 </style>

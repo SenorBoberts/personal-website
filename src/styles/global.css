@@ -21,4 +21,8 @@
     --code-string-color: #f1fa8c; /* Color for code strings */
     --code-comment-color: #6272a4; /* Color for code comments */
 }
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
 

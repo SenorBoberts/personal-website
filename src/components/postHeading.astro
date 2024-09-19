@@ -1,0 +1,30 @@
+---
+const {title, subtitle, author, date} = Astro.props;
+---
+
+<div id="heading">
+    <h1 id="title">{title}</h1>
+    <h3 id="subtitle">{subtitle}</h3>
+    <hr>
+    <small id="byline">{`by ${author} on ${date}`}</small>
+</div>
+
+<style>
+    #heading{
+        display: flex;
+        flex-direction: column;
+    }
+    #title{
+        margin: 0 0 .5rem 0;
+        font-size: 2.5rem;
+    }
+    #subtitle{
+        margin: 0;
+    }
+    #byline{
+        color: gray;
+    }
+    hr{
+        width: 100%;
+    }
+</style>
