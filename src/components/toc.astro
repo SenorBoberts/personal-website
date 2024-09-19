@@ -1,0 +1,35 @@
+---
+const { headings } = Astro.props;
+---
+
+<button id="toggle">Table of Contents</button>
+<div id="TOC">
+    <nav>
+        <ul>
+            {headings.map((heading) => <a href={"#" + heading.slug}><li>{heading.text}</li></a>)}
+        </ul>
+    </nav>
+</div>
+
+<script>
+    document.querySelector("#toggle").addEventListener("click", () =>{
+        var toc = document.getElementById("TOC");
+        if(toc.style.display === 'block'){
+            toc.style.display = 'none';
+        }else{
+            toc.style.display = 'block';
+        }
+    })
+</script>
+
+<style>
+    button{
+        background-color: var(--background-color);
+        width: 100%;
+        border-radius: 999px;
+        border: solid var(--foreground-color) .1rem;
+    }
+    #TOC{
+        display: none;
+    }
+</style>
