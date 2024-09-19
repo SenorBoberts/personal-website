@@ -2,7 +2,7 @@
 const { headings } = Astro.props;
 ---
 
-<button id="toggle">Table of Contents</button>
+<button id="toggle"><p>Table of Contents</p></button>
 <div id="TOC">
     <nav>
         <ul>
@@ -12,7 +12,7 @@ const { headings } = Astro.props;
 </div>
 
 <script>
-    document.querySelector("#toggle").addEventListener("click", () =>{
+    document.querySelector("#toggle")?.addEventListener("click", () =>{
         var toc = document.getElementById("TOC");
         if(toc.style.display === 'block'){
             toc.style.display = 'none';
@@ -24,12 +24,18 @@ const { headings } = Astro.props;
 
 <style>
     button{
-        background-color: var(--background-color);
+        background-color: var(--foreground-color);
         width: 100%;
         border-radius: 999px;
-        border: solid var(--foreground-color) .1rem;
+        border: solid var(--text-color) .1rem;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
     }
     #TOC{
         display: none;
+    }
+    p{
+        margin: .25rem;
     }
 </style>
