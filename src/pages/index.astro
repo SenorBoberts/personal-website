@@ -13,11 +13,16 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 			<h1>Hi I'm <u>Ben Roberts</u> &#128075; </h1>
 			<div id="subline">
 				<h2>I do things</h2>
-				<h2>Hire me</h2>
+				<p>
+					I'm a recent graduate from the University of Maryland with a bachelors degreee in computer science.
+					Currently I am taking a year off to travel, write, and explore my many hobbies. 
+					I primarily live in Berkeley, California.
+				</p>
 				<div id="buttons">
 					<a download="/images/headshot.jpg"><button>Download Resume/CV</button></a>
 					<button>Contact Me</button>
 				</div>
+				<small>This is a work in progress site. Nothing is final and will likely change in the future. Features may break or be unimplemented</small>
 			</div>
 		</div>
 	</div>
@@ -26,30 +31,27 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 <style>
 	#header{
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		gap: 2rem;
+		padding: 10vh;
 	}
 	#image{
-		width: 15rem;
+		width: 40vh;
 		height: auto;
 		border-radius: 10%;
 		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
 	}
 	img{
-		width: 100%;
-		height: auto;
-		display: block;
+		height:100%;
 	}
 	#tagline{
 		display: flex;
 		flex-direction: column;
+		width: 20rem;
 	}
 	#subline{
-		margin-left: 1rem;
+		margin: 0;
 	}
 	h2{
 		margin: 0;
@@ -61,5 +63,8 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 		background-color: var(--accent-color);
 		border-radius: 10px;
 		cursor: pointer;			
+	}
+	small{
+		color: gray;
 	}
 </style>

@@ -1,12 +1,12 @@
 ---
 import PostHeading from "./postHeading.astro";
 
-const {title, subtitle, author, date} = Astro.props.post.frontmatter;
+const {title, subtitle, author, date, image} = Astro.props.post.frontmatter;
 ---
 
 <div id="container">
     <div id="image">
-        <img src="/images/placeholder.jpg" alt="placeholder image">
+        <img src={image} alt="placeholder image">
     </div>
     <div id="heading">
         <PostHeading {title} {subtitle} {author} {date} /> 
@@ -24,10 +24,13 @@ const {title, subtitle, author, date} = Astro.props.post.frontmatter;
         width: 90%;
         gap: 1rem;
     }
-    img{
-        height: 10rem;
-        width: auto;
+    #image{
         padding: 1rem;
+    }
+    img{
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
     }
     #heading{
         flex-grow: 1;
