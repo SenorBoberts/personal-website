@@ -1,0 +1,27 @@
+---
+import DefaultLayout from "../../layouts/defaultLayout.astro"
+import BlogCard from "../../components/blogCard.astro"
+
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<DefaultLayout 
+    title="Blog" 
+    description="Ben B. Roberts' blog.">
+    <div id="posts">
+        {
+            posts.map((post) => <a href={post.url}><BlogCard {post} /></a>) 
+        } 
+    </div>
+    
+</DefaultLayout>
+
+<style>
+    #posts{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex-grow: 1;
+        margin: 2.5rem 0 2.5rem 0;
+    }
+</style>

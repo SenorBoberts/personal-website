@@ -1,0 +1,34 @@
+---
+const {title, subtitle, author, date} = Astro.props;
+
+const dateObject = new Date(date);
+const dateString = dateObject.toLocaleDateString('en-Us', { timeZone: "UTC" });
+---
+
+<div id="heading">
+    <h1 id="title">{title}</h1>
+    <h3 id="subtitle">{subtitle}</h3>
+    <hr>
+    <small id="byline">{`by ${author} on ${dateString}`}</small>
+</div>
+
+<style>
+    #heading{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+    #title{
+        margin: 0 0 .5rem 0;
+        font-size: 2.5rem;
+    }
+    #subtitle{
+        margin: 0;
+    }
+    #byline{
+        color: gray;
+    }
+    hr{
+        width: 100%;
+    }
+</style>

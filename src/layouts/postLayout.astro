@@ -1,0 +1,30 @@
+---
+import DefaultLayout from "./defaultLayout.astro";
+import PostHeading from "../components/postHeading.astro";
+import TOC from "../components/toc.astro";
+
+const {frontmatter, headings} = Astro.props;
+const {title, subtitle, author, date, description} = frontmatter;
+---
+
+<DefaultLayout 
+    title={title} 
+    description={description}>
+    <article>
+    <div id="content">
+        <PostHeading {title} {subtitle} {author} {date} />
+        <TOC {headings} />
+        <div id="text">
+            <slot />
+        </div>
+    </div>
+    </article>
+</DefaultLayout>
+
+<style>
+    #content{
+        width: 80%;
+        margin: auto;
+        padding: 2.5rem;
+    }
+</style>
