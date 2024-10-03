@@ -6,7 +6,7 @@ const {title, subtitle, author, date, image} = Astro.props.post.frontmatter;
 
 <div id="container">
     <div id="image">
-        <img src={image} alt="placeholder image">
+        <img src={image} alt="/images/placeholder.jpg">
     </div>
     <div id="heading">
         <PostHeading {title} {subtitle} {author} {date} /> 
