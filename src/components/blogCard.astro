@@ -1,40 +1,48 @@
----
-import PostHeading from "./postHeading.astro";
+        ---
+        import PostHeading from "./postHeading.astro";
 
-const {title, subtitle, author, date, image} = Astro.props.post.frontmatter;
----
+        const {title, subtitle, author, date, image} = Astro.props.post.frontmatter;
+        ---
 
-<div id="container">
-    <div id="image">
-        <img src={image} alt="/images/placeholder.jpg">
-    </div>
-    <div id="heading">
-        <PostHeading {title} {subtitle} {author} {date} /> 
-    </div>
-</div>
+        <div id="container">
+            <div id="image">
+                <img src={image} alt="/images/placeholder.jpg">
+            </div>
+            <div id="heading">
+                <PostHeading {title} {subtitle} {author} {date} /> 
+            </div>
+        </div>
 
-<style>
-    #container:hover{
-        box-shadow: .1rem .1rem 0 var(--accent-color);
-    }
-    #container{
-        display: flex;
-        flex-wrap: wrap;
-        background: var(--foreground-color); 
-        margin: auto;
-        gap: 1rem;
-    }
-    #image{
-        padding: 1rem;
-    }
-    img{
-        width: 10rem;
-        height: 10rem;
-        object-fit: cover;
-    }
-    #heading{
-        flex-grow: 1;
-        padding: 1rem;
-        margin: auto;
-    }
-</style>
+
+        <style>
+            #container:hover{
+                box-shadow: .1rem .1rem 0 var(--accent-color);
+            }
+            #container{
+                display: flex;
+                overflow: hidden;
+                background: var(--foreground-color); 
+                margin: auto;
+                width: 90%;
+                gap: .5rem;
+                border-radius: 25px;        
+            }
+            #image{
+                display: flex;
+                flex: end;      
+            }
+            img{
+                width: 12.5rem;
+                height: auto;
+                min-height: 12.5rem;
+                object-fit: cover;
+                border-radius: 25px 0 0 25px;
+                margin: 0;
+                padding: 0;
+            }
+            #heading{
+                flex-grow: 1;
+                padding: .5rem 2rem .5rem 1rem;
+                margin: auto;
+            }
+        </style>
