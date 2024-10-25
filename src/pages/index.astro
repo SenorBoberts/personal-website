@@ -21,8 +21,11 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 				<div id="buttons">
 					<a href="/files/ResumeFall2024NoContact.pdf" download="BenRobertsResume.pdf"><button>Download Resume/CV</button></a>
 					<button>Contact Me</button>
+					</div>
 				</div>
+				<p>
 				<small>This is a work in progress site. Nothing is final and will likely change in the future. Features may break or be unimplemented</small>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -59,10 +62,19 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 	u{
 		color: var(--accent-color);
 	}
+	#buttons{
+		display: flex;
+		gap: .75rem;
+	}
 	button{
 		background-color: var(--accent-color);
-		border-radius: 10px;
-		cursor: pointer;			
+		color: var(--background-color);
+		border-radius: 15px;
+		cursor: pointer;
+		font-size: 1rem;
+		padding:.3rem .6rem .3rem .6rem;
+		box-sizing: border-box;
+		border: 0;			
 	}
 	small{
 		color: gray;
