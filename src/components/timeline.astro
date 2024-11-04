@@ -1,0 +1,79 @@
+---
+---
+
+<div class="timeline">
+    <div class="entry">
+        <div class="circle"></div>
+        <div class="content">
+            <h3>June 2024 - Present</h3>
+            <h2>Indepent Contractor Software Engineer</h2>
+            <h4>Dataannotation - Remote</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="circle"></div>
+        <div class="content">
+            <h3>January 2023 - December 2023</h3>
+            <h2>Teaching Assistant</h2>
+            <h4>University of Maryland - College Park, Maryland, USA</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="circle"></div>
+        <div class="content">
+            <h3>June 2021 - July 2021</h3>
+            <h2>Software Engineering Intern</h2>
+            <h4>John's Hopkins University Applied Physics Labratory - Laurel, Maryland, USA</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .timeline {
+        position: relative;
+        width: 80%;
+        max-width: 40em;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 2%;
+        top: 0;
+        bottom: 0;
+        width: 0.25em;
+        background: var(--accent-color);
+    }
+
+    .entry {
+        position: relative;
+        padding-left: 3em;
+        margin-bottom: 2em;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+    }
+
+    .circle::before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        width: 0.5em;
+        height: 0.5em;
+        background: #fff;
+        border-radius: 50%;
+    }
+</style>

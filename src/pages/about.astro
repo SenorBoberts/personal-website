@@ -1,8 +1,80 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro";
+import Timeline from "../components/timeline.astro";
+import HobbieCard from "../components/hobbieCard.astro";
+import Toc from "../components/toc.astro";
 ---
 
 <DefaultLayout title="About Me" description="A page about me">
-    <h1>About me</h1>
-    <h2>Page coming soon</h2>
+    <div id="content">
+
+        <h1>My Education</h1>
+        <div id="education">
+            <img id="education-image" src="images/grad.JPG">
+            <div>
+                <h3>I graduated with a Bachelors of Science in Computer Science from the University of Maryland College Park in May 2024.</h2>
+                <h3>I attended high school at Berkeley High School in Berkeley, California where I earned a high school diploma and the International Bacclaurate.</h4>
+            </div>
+        </div>
+
+        <h1>My Experiance</h1>
+        <div id="experiance">
+            <div id="paragram">
+                <h2>What I'm doing now</h2>
+                <p>I'm currently working as a remote independent contractor at dataannotation. Remote contract work affords me the time and flexibility to travel and explore my hobbies in my youth. </p>
+            </div>
+            <Timeline />
+        </div>
+
+
+        <div id="hobbie-section">
+            <h1>My Hobbies</h1>
+            <div id="hobbies">
+                <HobbieCard imageURL=" " hobbyName="Hobby Name" hobbyDesc="Hobby description">
+                    Hobby description <strong>BOLD TEXT</strong>
+                </HobbieCard>
+                <HobbieCard imageURL=" " hobbyName="Hobby Name" hobbyDesc="Hobby description">
+                    Hobby description
+                </HobbieCard>
+                <HobbieCard imageURL=" " hobbyName="Hobby Name" hobbyDesc={`Hobby description <strong>BOLD TEXT<\strong>`}>
+                    Hobby description 
+                </HobbieCard>
+            </div>
+        </div>
+    </div>
 </DefaultLayout>
+
+<style>
+    #content{
+        width: 80%;
+        margin: auto;
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    #education{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    #education-image{
+        width: 30rem;
+        border-radius: 25px;
+    }
+    #experiance{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    #paragram{
+        text-align: justify;  
+        width: 80%;
+    }
+    h1{
+        text-align: center;
+    }
+    #hobbies{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        padding: 1rem 0 1rem 0;
+    }
+</style>

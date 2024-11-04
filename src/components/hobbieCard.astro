@@ -1,0 +1,34 @@
+---
+const {imageURL, hobbyName, hobbyDesc} = Astro.props;
+---
+
+<div id="content">
+    <div id="image">
+        <img src="images/placeholder.jpg">
+    </div>
+    <div id="text">
+        <h2>{hobbyName}</h2>
+        <p>
+            <slot />
+        </p>
+    </div>
+</div>
+
+<style>
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--foreground-color);
+        border-radius: 15px;
+        box-sizing: border-box;
+    }
+    img{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 15px 15px 0 0;
+    }
+    #text{
+        padding: 0 .5rem 0 .5rem;
+    }
+</style>
