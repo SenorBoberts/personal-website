@@ -4,7 +4,7 @@ const {imageURL, hobbyName, hobbyDesc} = Astro.props;
 
 <div id="content">
     <div id="image">
-        <img src="images/placeholder.jpg">
+        <img src={imageURL}>
     </div>
     <div id="text">
         <h2>{hobbyName}</h2>
@@ -26,6 +26,7 @@ const {imageURL, hobbyName, hobbyDesc} = Astro.props;
     img{
         height: 15rem;
         width: 15rem;
+        object-fit: cover;
         border-radius: 15px 15px 0 0;
     }
     #text{
