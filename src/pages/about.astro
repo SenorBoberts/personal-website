@@ -23,32 +23,36 @@ import Toc from "../components/toc.astro";
 
         <h1>My Experiance</h1>
         <div id="experiance">
-            <div id="paragram">
-                <h2>What I'm doing now</h2>
-                <p>I'm currently working as a remote independent contractor at dataannotation. Remote contract work affords me the time and flexibility to travel and explore my hobbies in my youth. </p>
+            <div id="experiance-text">
+                <div id="paragram">
+                    <h2>What I'm doing now</h2>
+                    <p>I'm currently working as a remote independent contractor at dataannotation. In this position I work on a variety of projects related to training large language models to write, edit, and reason about code. It has exposed me to a variety of languages, technologies, and paradigms.</p> 
+                    <p>Remote contract work affords me the time and flexibility to travel and explore my hobbies in my youth. </p>
+                </div>
                 <div id="link-container">
                     <h2>Links</h2>
                     <div id="links">    
                         <a href="https://github.com/SenorBoberts"><i class="fa-brands fa-github fa-5x"></i></a>
-                        <a href="https://www.linkedin.com/in/benrobertsplus1/"><i class="fa-brands fa-linkedin fa-5x"></i>
+                        <a href="https://www.linkedin.com/in/benrobertsplus1/"><i class="fa-brands fa-linkedin fa-5x"></i></a>
                     </div>
                 </div>
             </div>
             <Timeline />
         </div>
 
-
+        <!-- 
         <div id="hobbie-section">
             <h1>My Hobbies</h1>
             <div id="hobbies">
                 <HobbieCard imageURL="images/BMan.JPG" hobbyName="Burning Man" hobbyDesc="Hobby description">
-                    Hobby description <strong>BOLD TEXT</strong>
+                    hobby description
                 </HobbieCard>
                 <HobbieCard imageURL="images/guitar.jpg" hobbyName="Music" hobbyDesc="Hobby description">
                     Hobby description
                 </HobbieCard>
             </div>
         </div>
+        -->
     </div>
 </DefaultLayout>
 
@@ -72,12 +76,18 @@ import Toc from "../components/toc.astro";
         justify-content: center;
         gap: 2rem;
     }
+    #experiance-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+    }
     #paragram{
         text-align: justify;  
-        width: 50%;
     }
     #link-container{
         text-align: center;
+        padding: 1rem;
     }
     #links{
         display: flex;
